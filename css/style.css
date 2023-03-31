@@ -3,6 +3,10 @@ body {
     color: #fff;
     background-color: #61122f;
     font-family: Oxygen;
+    overflow-x: hidden;
+}
+html{
+    overflow-x: hidden;
 }
 
 #header-nav {
@@ -25,7 +29,7 @@ body {
 .navbar-brand h1 {
     font-family: 'Lora', serif;
     color: #557c3e;
-    font-size: 1.5em;
+    font-size: 30px;
     text-transform: uppercase;
     font-weight: bold;
     text-shadow: 1px 1px 1px #222;
@@ -52,7 +56,7 @@ body {
 }
 
 
-.navitem ul {
+.navbar-list{
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -75,6 +79,80 @@ li {
 
 .navitem li a:hover {
     background-color: #111111;
+}
+
+.mobile-nav-icon{
+    width: 3rem;
+    height: 3rem;
+    color: #030303;
+}
+.mobile-nav-icon[name="close-outline"]{
+    display: none;
+}
+.mobile-navbar-btn{
+    display: none;
+    background: transparent;
+    cursor: pointer;
+}
+@media(max-width:62em){
+    .mobile-navbar-btn{
+        display: block;
+        z-index: 999;
+        border: 3px solid #212529;
+        color: #212529;
+    }
+    .header{
+        position: relative;
+    }
+    .navitem{
+        /* display: none; */
+        width: 100%;
+        height: 100vh;
+        background: #253eff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transform: translateX(100%);
+        transition: all 0.5s linear;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+
+    }
+    .navbar-list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .active .navitem{
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+    .active .mobile-navbar-btn .mobile-nav-icon[name="close-outline"] {
+        display: block;
+        
+
+    }
+    .active .mobile-navbar-btn .mobile-nav-icon[name="menu-outline"] {
+        display: none;
+
+
+    }
+}
+@media(max-width:37em){
+    .header{
+        padding: 0 3.2em;
+
+    }
+    
 }
 main h1{
     display: flex;
