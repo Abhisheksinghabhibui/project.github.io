@@ -94,66 +94,8 @@ li {
     background: transparent;
     cursor: pointer;
 }
-@media(max-width:62em){
-    .mobile-navbar-btn{
-        display: block;
-        z-index: 999;
-        border: 3px solid #212529;
-        color: #212529;
-    }
-    .header{
-        position: relative;
-    }
-    .navitem{
-        /* display: none; */
-        width: 100%;
-        height: 100vh;
-        background: #253eff;
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        transform: translateX(100%);
-        transition: all 0.5s linear;
-
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
 
 
-    }
-    .navbar-list{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .active .navitem{
-        transform: translateX(0);
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-    }
-    .active .mobile-navbar-btn .mobile-nav-icon[name="close-outline"] {
-        display: block;
-        
-
-    }
-    .active .mobile-navbar-btn .mobile-nav-icon[name="menu-outline"] {
-        display: none;
-
-
-    }
-}
-@media(max-width:37em){
-    .header{
-        padding: 0 3.2em;
-
-    }
-    
-}
 main h1{
     display: flex;
     justify-content: center;
@@ -203,6 +145,10 @@ main h2{
     
 
 }
+.nonvegfooditem h2{
+    background-color: #5ce010;
+    color: white;
+}
 .nonvegitem img{
     width: 235px;
     height: 200px;
@@ -229,17 +175,20 @@ footer p{
 }
 
 .contactform{
-    padding: 0 34px;
+    padding: 0 84px;
     padding-top: 144px;
     font-family: 'Fira Sans', sans-serif;
     margin: 0 88px;
 
 }
-
-.contactform h1{
-    font-family: 'Source Code Pro', monospace;
-    /* padding: 12px 0; */
+.formheading{
+font-size: 58px;
+background-color: blue;
+width: 51vw;
+margin-bottom: 7%;
+margin-left: -50px;
 }
+
 .contactform form div{
     padding: 10px 0;
     display: flex;
@@ -252,7 +201,9 @@ footer p{
     padding: 3px;
 }
 .contactform form{
-    margin: 0 40px;
+    margin: 0 -50px;
+    /* justify-content: center;
+    align-items: center; */
 }
 .form-control{
     width: 700px;
@@ -263,6 +214,9 @@ footer p{
  #form-check input{
      width: 24px;
      margin: 3px;
+ }
+ #form-check label{
+    margin-left: 35px;
  }
  .buttons{
     margin-top: 34px;
@@ -289,38 +243,7 @@ footer p{
     color: dodgerblue;
 
 }
-section#about {
-    padding: 60px 0;
-    text-align: center;
-    background-color: #14dfdf;
-  }
-  
-  section#about h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-  }
-  
-  section#about p {
-    font-size: 28px;
-    line-height: 2;
-    margin-bottom: 20px;
-  }
-  
-  section#about .container {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  
-  section#about .row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  section#about img {
-    max-width: 110%;
-    height: auto;
-  }
+
 
   .vegfooditem h2{
     animation-name: widthanimate;
@@ -345,3 +268,167 @@ section#about {
     }
     
   }
+/* responsive property start */
+@media(max-width:62em){
+    .mobile-navbar-btn{
+        display: block;
+        z-index: 999;
+        border: 3px solid #212529;
+        color: #212529;
+    }
+    .header{
+        position: relative;
+    }
+    .navitem{
+        width: 100%;
+        height: 100vh;
+        background: #253eff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transform: translateX(100%);
+        transition: all 0.5s linear;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+
+
+    }
+    .navbar-list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .active .navitem{
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+    .active .mobile-navbar-btn .mobile-nav-icon[name="close-outline"] {
+        display: block;
+        
+
+    }
+    .active .mobile-navbar-btn .mobile-nav-icon[name="menu-outline"] {
+        display: none;
+
+
+    }
+    .vegfooditem{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .nonvegfooditem{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+   
+    .form-control{
+        width: 400px;
+
+    }
+    
+    #form-check{
+        flex-direction: row;
+     }
+     #form-check input{
+         width: 14px;
+         margin: 3px;
+     }
+     #form-check label{
+        margin-left: 25px;
+     }
+     .formheading{
+        font-size: 33px;
+        width: 64vw;
+        margin-left: -50px;
+     }
+     .buttons{
+        margin-top: 24px;
+        font-size: 10px;
+    }
+    .btn{
+        padding: 5px 10px;
+        border-radius: 12px;
+        font-size: 2em;
+        margin: 3px 3px;
+        
+    
+    }
+    .btn-sm{
+        font-size: 10px;
+        padding: 5px ,9px;
+        margin: 8px 0;
+    }
+
+    
+}
+@media(max-width:37em){
+    .header{
+        padding: 0 3.2em;
+
+    }
+    .form-control{
+        width: 250px;
+
+    }
+    .formheading{
+        font-size: 20px;
+        width: 65vw;
+        margin-left: -80px;
+     }
+     .contactform form{
+        margin-left: -80px;
+     }
+    
+    #form-check{
+        flex-direction: row;
+     }
+     #form-check input{
+        width: 14px;
+        margin: 3px;
+    }
+    #form-check label{
+       margin-left: 25px;
+    }
+
+     }
+     .buttons{
+        margin-top: 14px;
+        font-size: 6px;
+    }
+    .btn{
+        padding: 3px 6px;
+        border-radius: 8px;
+        font-size: 2em;
+        margin: 2px 2px;
+        
+    
+    }
+    .btn-sm{
+        font-size: 20px;
+        padding: 3px 6px;
+        margin: 5px 0;
+    }
+    
+
+/* Responsive property ends */
+
+.aboutcontent{
+    margin: 5%;
+    font-size: large;
+}
+.credits{
+    color: gold;
+}
