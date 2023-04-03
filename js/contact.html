@@ -56,7 +56,7 @@
         <div class="contactform">
             <div class="formheading">Contact me for your Query</div>
     
-            <form>
+            <form onsubmit="sendEmail(); reset(); return false;">
                 <div class="form-group">
                     <label for="clientname">Name</label>
                     <input type="Name" class="form-control" id="clientname">
@@ -75,7 +75,7 @@
                     <input type="details" class="form-control" id="details">
                 </div>
                 <div class="form-group" id="form-check">
-                    <input type="checkbox" class="form-check-input" id="isclient">
+                    <input type="checkbox" class="form-check-input" id="fromlko">
                     <label class="form-check-label" for="exampleCheck1" style="color: yellow;">Are You From Lucknow?</label>
                 </div>
                 <button type="submit" class="btn btn-sm">Submit</button>
@@ -93,6 +93,7 @@
         crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 
 </html>

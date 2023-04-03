@@ -7,3 +7,19 @@ const toggleNavbar = () => {
 };
 
 mobile_nav.addEventListener('click', () => toggleNavbar());
+
+function sendEmail(){
+    console.log("hello");
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "singhabhisheklko315@gmail.com",
+        Password : "6FAE6B21E0E94AE8DED726313AC7095EE24A",
+        To : "singhabhisheklko315@gmail.com",
+        From : "singhabhisheklko315@gmail.com",
+        Subject : "lucknow foods enquiry",
+        Body : "Name:" + document.getElementById("clientname").value + "<br> Email: " +document.getElementById("clientemail").value + "<br> phone no: " + document.getElementById("clientphone").value + "<br> Messages: " + document.getElementById("details").value + "<br> from lucknow:" + document.getElementById("fromlko").value
+    }).then(
+        message => alert("Query Submitted Succesfully")
+    );
+   
+}
