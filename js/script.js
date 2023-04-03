@@ -13,7 +13,7 @@ function sendEmail(){
     Email.send({
         Host : "smtp.elasticemail.com",
         Username : "singhabhisheklko315@gmail.com",
-        Password : "6F585DC1D24F58FF51A6BC09CE75AA5BDB1E",
+        Password : "969D6A1DBF3F35BF7967EBA6967B052B4F4D",
         To : "singhabhisheklko315@gmail.com",
         From : "singhabhisheklko315@gmail.com",
         Subject : "lucknow foods enquiry",
@@ -22,4 +22,4 @@ function sendEmail(){
         message => alert("Query Submitted Succesfully")
     );
    
-};
+}
